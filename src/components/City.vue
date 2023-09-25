@@ -13,6 +13,11 @@ import Marker from './icons/Marker.vue'
 .city {
   display: flex;
   align-items: center;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.city:hover {
+  opacity: 0.7;
 }
 
 .city span {
