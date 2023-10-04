@@ -1,44 +1,49 @@
 <script setup>
-
+const categoriesNav = [
+  {
+    name: 'Акции',
+    link: '/catalog/'
+  },
+  {
+    name: 'Строительные материалы',
+    link: '/catalog/'
+  },
+  {
+    name: 'Керамическая плитка',
+    link: '/catalog/'
+  },
+  {
+    name: 'Краски',
+    link: '/catalog/'
+  },
+  {
+    name: 'Сантехника',
+    link: '/catalog/'
+  },
+  {
+    name: 'Напольные покрытия',
+    link: '/catalog/'
+  },
+  {
+    name: 'Инструменты',
+    link: '/catalog/'
+  },
+  {
+    name: 'Обои',
+    link: '/catalog/'
+  },
+  {
+    name: 'Окна',
+    link: '/catalog/'
+  },
+]
 </script>
 
 <template>
   <nav class="header__categories-nav">
     <ul class="list-reset header__categories-nav-list">
-      <li class="header__categories-nav-item">
-        <router-link class="header__categories-nav-link" to="/catalog/">Акции</router-link>
-      </li>
-
-      <li class="header__categories-nav-item">
-        <router-link class="header__categories-nav-link" to="/catalog/">Строительные материалы</router-link>
-      </li>
-
-      <li class="header__categories-nav-item">
-        <router-link class="header__categories-nav-link" to="/catalog/">Керамическая плитка</router-link>
-      </li>
-
-      <li class="header__categories-nav-item">
-        <router-link class="header__categories-nav-link" to="/catalog/">Краски</router-link>
-      </li>
-
-      <li class="header__categories-nav-item">
-        <router-link class="header__categories-nav-link" to="/catalog/">Сантехника</router-link>
-      </li>
-
-      <li class="header__categories-nav-item">
-        <router-link class="header__categories-nav-link" to="/catalog/">Напольные покрытия</router-link>
-      </li>
-
-      <li class="header__categories-nav-item">
-        <router-link class="header__categories-nav-link" to="/catalog/">Инструменты</router-link>
-      </li>
-
-      <li class="header__categories-nav-item">
-        <router-link class="header__categories-nav-link" to="/catalog/">Обои</router-link>
-      </li>
-
-      <li class="header__categories-nav-item">
-        <router-link class="header__categories-nav-link" to="/catalog/">Окна</router-link>
+      <li v-for="item in categoriesNav" :key="item.name" class="header__categories-nav-item">
+        <router-link class="header__categories-nav-link" :to="item.link">{{ item.name }}</router-link>
       </li>
     </ul>
   </nav>
