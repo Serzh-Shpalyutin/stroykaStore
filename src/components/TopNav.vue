@@ -1,26 +1,33 @@
-<script setup></script>
+<script setup>
+const topNavList = [
+  {
+    name: 'Бренды',
+    link: '/catalog/'
+  },
+  {
+    name: 'Доставка',
+    link: '/catalog/'
+  },
+  {
+    name: 'Возврат',
+    link: '/catalog/'
+  },
+  {
+    name: 'Документация',
+    link: '/catalog/'
+  },
+  {
+    name: 'Контакты',
+    link: '/catalog/'
+  },
+]
+</script>
 
 <template>
   <nav class="top-nav">
     <ul class="list-reset top-nav__list">
-      <li class="top-nav__item">
-        <router-link class="top-nav__link" to="/catalog">Бренды</router-link>
-      </li>
-
-      <li class="top-nav__item">
-        <router-link class="top-nav__link" to="/catalog">Доставка</router-link>
-      </li>
-
-      <li class="top-nav__item">
-        <router-link class="top-nav__link" to="/catalog">Возврат</router-link>
-      </li>
-
-      <li class="top-nav__item">
-        <router-link class="top-nav__link" to="/catalog">Документация</router-link>
-      </li>
-
-      <li class="top-nav__item">
-        <router-link class="top-nav__link" to="/catalog">Контакты</router-link>
+      <li v-for="item in topNavList" :key="item.name" class="top-nav__item">
+        <router-link class="top-nav__link" :to="item.link">{{ item.name }}</router-link>
       </li>
     </ul>
   </nav>

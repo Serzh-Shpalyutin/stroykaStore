@@ -1,9 +1,10 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import MainSlider from '@/components/MainSlider.vue'
 </script>
 
 <template>
-  <h1>Home</h1>
+  <MainSlider />
 </template>
 
 <style scoped>

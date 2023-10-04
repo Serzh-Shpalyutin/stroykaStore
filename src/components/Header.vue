@@ -5,6 +5,7 @@ import HeaderLogo from './icons/HeaderLogo.vue'
 import CatalogIcon from './icons/CatalogIcon.vue'
 import Search from './Search.vue'
 import UserNav from './UserNav.vue'
+import HeaderCategoriesNav from './HeaderCategoriesNav.vue'
 
 </script>
 
@@ -24,9 +25,9 @@ import UserNav from './UserNav.vue'
 
     <div class="header__middle">
       <div class="container header__middle-container">
-          <router-link class="logo" to="/">
-            <HeaderLogo />
-          </router-link>
+        <router-link class="logo" to="/">
+          <HeaderLogo />
+        </router-link>
 
         <div class="header__middle-rside">
           <router-link class="btn btn--catalog" to="/catalog/">
@@ -42,7 +43,9 @@ import UserNav from './UserNav.vue'
     </div>
 
     <div class="header__bottom">
-
+      <div class="container">
+        <HeaderCategoriesNav />
+      </div>
     </div>
   </header>
 </template>
@@ -86,4 +89,8 @@ import UserNav from './UserNav.vue'
   gap: 16px;
 }
 
+.header__bottom {
+  padding: 10px 0px;
+  border-bottom: 1px solid #E8E9EA;
+}
 </style>

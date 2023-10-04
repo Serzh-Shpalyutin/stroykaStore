@@ -52,6 +52,15 @@ a {
   color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 .container {
   max-width: 1160px;
   margin: 0 auto;
@@ -70,6 +79,11 @@ a {
   line-height: 136%;
   color: var(--dark-color);
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.btn--default {
+  max-width: fit-content;
+  padding: 12px 24px;
 }
 
 .btn:hover {
