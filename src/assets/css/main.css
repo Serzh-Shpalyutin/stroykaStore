@@ -117,3 +117,26 @@ h6 {
 .btn--catalog .catalog-icon path {
   transition: stroke 0.2s ease-in-out;
 }
+
+.btn--transparent {
+  background-color: transparent;
+  padding: 12px 24px;
+  border: 1px solid #D1D1D3;
+}
+
+.btn--product {
+  padding: 12px 16px 12px 24px;
+}
+
+.section-margin {
+  margin: 80px 0px;
+}
+
+.section-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  color: #2F323A;
+}
